@@ -1,0 +1,13 @@
+[Unit]
+Description=Aiohttp auth
+After=network.target
+
+[Service]
+User=###USERNAME###
+Type=simple
+WorkingDirectory=/home/###USERNAME###/deploy/apps/nginx_aioauth
+ExecStart=/home/###USERNAME###/deploy/apps/nginx_aioauth/venv/bin/python3 /home/###USERNAME###/deploy/apps/nginx_aioauth/aiologin.py
+
+
+[Install]
+WantedBy=default.target
